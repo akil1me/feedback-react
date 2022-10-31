@@ -1,5 +1,5 @@
 import "./container.scss"
 
-export const Container = (props) => {
-  return <div className="container">{props.children}</div>
+export const Container = ({ children, page }) => {
+  return <div className={`container ${page ? "container" : "container-2"}`}>{children}</div>
 }

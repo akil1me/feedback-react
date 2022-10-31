@@ -2,12 +2,12 @@ import { Container } from "../../components/container/Container";
 import { Main } from "../../components/main/Main";
 import { SiteBar } from "../../components/site-bar/SiteBar";
 
-import "./home.scss"
+import "./suggestions.scss"
 
-export const Home = () => {
+const Suggestions = ({ page }) => {
   return (
     <div className="home">
-      <Container>
+      <Container page={page}>
         <div className="row">
           <div className="col-3">
             <SiteBar />
@@ -21,3 +21,5 @@ export const Home = () => {
     </div>
   )
 }
+
+export default Suggestions;
