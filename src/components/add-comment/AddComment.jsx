@@ -1,4 +1,3 @@
-import { Button } from "bootstrap";
 import FeedBtn from "../button/FeedBtn";
 import "./addComment.scss"
 

@@ -4,10 +4,10 @@ import { SiteBar } from "../../components/site-bar/SiteBar";
 
 import "./suggestions.scss"
 
-const Suggestions = ({ page }) => {
+const Suggestions = () => {
   return (
     <div className="home">
-      <Container page={page}>
+      <Container>
         <div className="row">
           <div className="col-3">
             <SiteBar />
