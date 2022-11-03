@@ -1,4 +1,5 @@
 import { useRoutes } from "react-router-dom";
+import NotFound from "../components/not-found/NotFound";
 import Detail from "../pages/Detail/Detail";
 import NewFeedBack from "../pages/NewFeedback/NewFeedback";
 import Suggestions from "../pages/Suggestions/Suggestions";
@@ -10,8 +11,8 @@ const routes = [
   },
 
   {
-    path: "/:key",
-    element: <h3 className="text-center">404 page not Found</h3>,
+    path: "*",
+    element: <NotFound />,
   },
 
   {
