@@ -1,7 +1,7 @@
 import avatar1 from "../assets/img/avatar-1.svg";
-import avatar2 from "../assets/img/avatar-1.svg";
-import avatar3 from "../assets/img/avatar-1.svg";
-import avatar4 from "../assets/img/avatar-1.svg";
+import avatar2 from "../assets/img/avatar-2.svg";
+import avatar3 from "../assets/img/avatar-3.svg";
+import avatar4 from "../assets/img/avatar-4.svg";
 
 const commets = [
   {

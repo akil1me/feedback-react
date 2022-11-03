@@ -3,11 +3,13 @@ import Button from "../../../button/Button";
 import sms from "../../../../assets/img/sms.png"
 
 import "./feedbackItem.scss";
+import { Link } from "react-router-dom";
 
 
 export const FeedbackItem = (props) => {
   return (
-    <li className="feed-item">
+    <li className="feed-item position-relative">
+      <Link to={`/detail/${props.id}`} className="position-absolute top-0 bottom-0 start-0 end-0"></Link>
       <div className="row">
         <div className="col-1 p-0">
           <button className="feed-item__mark d-flex flex-column align-items-center">

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import icon from "../../../assets/img/icon.svg";
 import FeedBtn from "../../button/FeedBtn";
 import "./addFeedback.scss"
@@ -25,7 +26,10 @@ export const AddFeedback = () => {
       </div>
 
 
-      <FeedBtn text="+ Add Feedback" classs="addBtn" />
+      <div className="position-relative">
+        <Link to="/suggestions/new-feedback" className="position-absolute top-0 bottom-0 end-0 start-0"></Link>
+        <FeedBtn text="+ Add Feedback" classs="addBtn" />
+      </div>
     </div>
   )
 }

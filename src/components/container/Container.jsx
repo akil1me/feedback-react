@@ -1,5 +1,5 @@
 import "./container.scss"
 
-export const Container = ({ children, detailePage = "" }) => {
-  return <div className={`container ${detailePage}`}>{children}</div>
+export const Container = ({ children, detailePage = "", newFeedBack = "" }) => {
+  return <div className={`container ${detailePage} ${newFeedBack}`}>{children}</div>
 }

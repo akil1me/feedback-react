@@ -14,7 +14,7 @@ const CommentsItem = (props) => {
               <p className="comment-item__username mb-3">{props.userName}</p>
             </div>
 
-            <a href="#detail" className="comment-item__replay">Replay</a>
+            <span href="#detail" className="comment-item__replay">Replay</span>
           </div>
 
           <p className="comment-item__comment">{props.commet}</p>

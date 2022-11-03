@@ -1,5 +1,6 @@
 const feedList = [
   {
+    id: 1,
     title: "Add tags for solutions",
     text: "Easier to search for solutions based on a specific stack.",
     mark: 112,
@@ -8,6 +9,7 @@ const feedList = [
   },
 
   {
+    id: 2,
     title: "Add a dark theme option",
     text: "It would help people with light sensitivities and who prefer dark mode.",
     mark: 99,
@@ -16,6 +18,7 @@ const feedList = [
   },
 
   {
+    id: 3,
     title: "Q&A within the challenge hubs",
     text: "Challenge-specific Q&A would make for easy reference.",
     mark: 65,
@@ -24,6 +27,7 @@ const feedList = [
   },
 
   {
+    id: 4,
     title: "Allow image/video upload to feedback",
     text: "Images and screencasts can enhance comments on solutions.",
     mark: 51,
@@ -32,6 +36,7 @@ const feedList = [
   },
 
   {
+    id: 5,
     title: "Ability to follow others",
     text: "Stay updated on comments and solutions other people post.",
     mark: 42,
@@ -40,6 +45,7 @@ const feedList = [
   },
 
   {
+    id: 6,
     title: "Preview images not loading",
     text: "Challenge preview images are missing when you apply a filter.",
     mark: 3,
