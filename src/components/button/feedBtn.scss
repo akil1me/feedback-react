@@ -17,6 +17,15 @@
   color: #F2F4FE;
 }
 
+.cancelBtn {
+  color: #F2F4FE;
+  background-color: #3A4374 !important;
+
+  &:hover {
+    background-color: #656EA3 !important;
+  }
+}
+
 .editBtn {
   background-color: #4661E6 !important;
 
