@@ -13,4 +13,4 @@ const NewFeedBack = () => {
   )
 }
 
-export default NewFeedBack
+export default NewFeedBack;
