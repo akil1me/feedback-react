@@ -4,7 +4,7 @@ const feedList = [
     title: "Add tags for solutions",
     text: "Easier to search for solutions based on a specific stack.",
     mark: 112,
-    num: 2,
+    num: 0,
     btn: "Enhancement",
   },
 
@@ -22,7 +22,7 @@ const feedList = [
     title: "Q&A within the challenge hubs",
     text: "Challenge-specific Q&A would make for easy reference.",
     mark: 65,
-    num: 1,
+    num: 0,
     btn: "Feature",
   },
 
@@ -31,7 +31,7 @@ const feedList = [
     title: "Allow image/video upload to feedback",
     text: "Images and screencasts can enhance comments on solutions.",
     mark: 51,
-    num: 2,
+    num: 0,
     btn: "Enhancement"
   },
 
@@ -40,7 +40,7 @@ const feedList = [
     title: "Ability to follow others",
     text: "Stay updated on comments and solutions other people post.",
     mark: 42,
-    num: 3,
+    num: 0,
     btn: "Feature",
   },
 

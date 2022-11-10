@@ -1,23 +1,40 @@
-import { Link, useParams } from "react-router-dom"
-import { Container } from "../../components/container/Container"
-import EditeFeedBackMain from "../../components/edite-feedback-main/EditeFeedBackMain"
+import { useContext } from "react";
+import { Link, useParams } from "react-router-dom";
+import { Container } from "../../components/container/Container";
 
-import datum from "../../data/feedList"
+import editeFeedBackImg from "../../assets/img/edite-feedback.svg";
 
-const EditeFeedBack = () => {
+import NewFeedBackMain from "../../components/new-feedback-main/NewFeedBackMain";
+import { AppContext } from "../../App";
+
+
+export const EditeFeedBack = () => {
 
   const { id } = useParams();
 
-  const link = datum.find(data => data.id === +id)
+  const { feedbackList, setFeedbackList } = useContext(AppContext)
+
+  const link = feedbackList.find(data => data.id === +id);
+
+
+  const hendleFeedbackSubmit = (inputTitle, textValue, selectValue) => {
+    console.log("dd");
+  }
 
   return (
+
     <div className="mt-3">
       <Container newFeedBack="container-3">
         <Link to={`/detail/${id}`}>{"< Go Back"}</Link>
-        <EditeFeedBackMain {...link} />
+
+        <NewFeedBackMain
+          editeFeedBackImg={editeFeedBackImg}
+          title={`Editing '${link.title}'`}
+          link={link}
+          onSubmit={hendleFeedbackSubmit}
+        />
       </Container>
     </div>
+
   )
 }
-
-export default EditeFeedBack;

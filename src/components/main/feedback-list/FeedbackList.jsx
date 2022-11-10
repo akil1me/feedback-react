@@ -1,14 +1,15 @@
+import { useContext } from "react";
+import { AppContext } from "../../../App";
 import { FeedbackItem } from "./feedback-item/FeedbackItem";
-
-import feedList from "../../../data/feedList";
 
 export const FeedbackList = () => {
 
+  const { feedbackList } = useContext(AppContext)
 
   return (
     <ul className="list-unstyled">
       {
-        feedList.map(item => <FeedbackItem {...item} key={item.mark} />)
+        feedbackList.map(item => <FeedbackItem {...item} key={item.mark} />)
       }
     </ul>
   )

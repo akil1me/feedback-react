@@ -1,4 +1,6 @@
+import { useContext } from "react";
 import { useParams } from "react-router-dom";
+import { AppContext } from "../../App";
 
 import AddComment from "../../components/add-comment/AddComment";
 import Comments from "../../components/comments/Comments";
@@ -7,13 +9,13 @@ import { Container } from "../../components/container/Container";
 import EditeFeedbackList from "../../components/edit-feedback-list/EdtiteFeedbackList";
 import EditeFeedback from "../../components/edit-feedback/EditFeedback";
 
-import feedList from "../../data/feedList";
-
 const Detail = () => {
+
+  const { feedbackList } = useContext(AppContext)
 
   const { id } = useParams();
 
-  const feedBackList = feedList.find(item => item.id === +id);
+  const feedBackList = feedbackList.find(item => item.id === +id);
 
   return (
     <Container detailePage="container-2">
