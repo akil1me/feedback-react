@@ -1,9 +1,10 @@
-import CommentsList from "./comments-list/ComeentsList";
+import { CommentsList } from "./comments-list/";
+
 import "./coments.scss";
 
-import notfound from "../../assets/img/not-found.png"
+import notfound from "../../assets/img/not-found.png";
 
-const Comments = ({ num = 0 }) => {
+export const Comments = ({ num = 0 }) => {
   return (
     <div className="comments card mt-4 py-3 px-4">
       <div>
@@ -18,5 +19,3 @@ const Comments = ({ num = 0 }) => {
     </div>
   )
 }
-
-export default Comments;

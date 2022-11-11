@@ -1,9 +1,12 @@
-import Button from "../../../button/Button";
+import { Link } from "react-router-dom";
 
+import { Button } from "../../../button/";
+
+//images
 import sms from "../../../../assets/img/sms.png"
 
+//scss
 import "./feedbackItem.scss";
-import { Link } from "react-router-dom";
 
 
 export const FeedbackItem = (props) => {

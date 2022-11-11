@@ -1,10 +1,10 @@
 import { useContext } from "react"
 import { Link, useNavigate } from "react-router-dom"
 import { AppContext } from "../../App"
-import FeedBtn from "../button/FeedBtn"
+import { FeedBtn } from "../button/"
 import "./newFeedBackForm.scss"
 
-export default function NewFeedBackForm({ defaultValueInput, defaultValueText, defaultValueSelect, onSubmit }) {
+export default function NewFeedBackForm({ defaultValueInput, defaultValueText, defaultValueSelect, onSubmit, hendleDeleteFeedback }) {
   const { inputRef, textAreaRef, selectRef } = useContext(AppContext)
 
   const navigate = useNavigate();
@@ -13,6 +13,11 @@ export default function NewFeedBackForm({ defaultValueInput, defaultValueText, d
   const hendleOnSubmit = (evt) => {
     evt.preventDefault();
     onSubmit(inputRef.current.value, textAreaRef.current.value, selectRef.current.value)
+    navigate("/")
+  }
+
+  const onDelete = () => {
+    hendleDeleteFeedback()
     navigate("/")
   }
 
@@ -65,7 +70,7 @@ export default function NewFeedBackForm({ defaultValueInput, defaultValueText, d
         {
           defaultValueInput &&
           <div>
-            <button className="new-feedback-from__btn btn btn-danger px-3" type="button">Delete</button>
+            <button className="new-feedback-from__btn btn btn-danger px-3" type="button" onClick={onDelete}>Delete</button>
           </div>
         }
 

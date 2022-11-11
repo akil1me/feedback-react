@@ -3,7 +3,7 @@ import "./newFeedBackMAin.scss"
 
 import NewFeedBackForm from "../new-feedback-form/NewFeedBackForm"
 
-export default function NewFeedBackMain({ newFeedBackImg, editeFeedBackImg, title, link = {}, onSubmit }) {
+export default function NewFeedBackMain({ newFeedBackImg, editeFeedBackImg, title, link = {}, onSubmit, hendleDeleteFeedback }) {
 
   const defaultValueInput = link.title;
   const defaultValueText = link.text;
@@ -20,7 +20,8 @@ export default function NewFeedBackMain({ newFeedBackImg, editeFeedBackImg, titl
         onSubmit={onSubmit}
         defaultValueInput={defaultValueInput}
         defaultValueText={defaultValueText}
-        defaultValueSelect={defaultValueSelect} />
+        defaultValueSelect={defaultValueSelect}
+        hendleDeleteFeedback={hendleDeleteFeedback} />
     </div>
   )
 }

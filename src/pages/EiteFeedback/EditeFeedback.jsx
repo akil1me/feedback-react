@@ -1,11 +1,13 @@
 import { useContext } from "react";
-import { Link, useParams } from "react-router-dom";
+import { AppContext } from "../../App";
+
+import { Link, Navigate, useNavigate, useParams } from "react-router-dom";
 import { Container } from "../../components/container/Container";
 
+// img
 import editeFeedBackImg from "../../assets/img/edite-feedback.svg";
 
 import NewFeedBackMain from "../../components/new-feedback-main/NewFeedBackMain";
-import { AppContext } from "../../App";
 
 
 export const EditeFeedBack = () => {
@@ -16,9 +18,23 @@ export const EditeFeedBack = () => {
 
   const link = feedbackList.find(data => data.id === +id);
 
-
   const hendleFeedbackSubmit = (inputTitle, textValue, selectValue) => {
-    console.log("dd");
+    const editedFeedback = {
+      id: +id,
+      title: inputTitle,
+      btn: selectValue,
+      text: textValue,
+      num: link.num || 0,
+      mark: link.mark || 0,
+    }
+    const index = feedbackList.findIndex(item => item.id === +id)
+
+    setFeedbackList([...feedbackList.slice(0, index), editedFeedback, ...feedbackList.slice(index + 1)])
+  }
+
+  const hendleDeleteFeedback = () => {
+    const index = feedbackList.findIndex(item => item.id === +id);
+    setFeedbackList([...feedbackList.slice(0, index), ...feedbackList.slice(index + 1)])
   }
 
   return (
@@ -32,6 +48,7 @@ export const EditeFeedBack = () => {
           title={`Editing '${link.title}'`}
           link={link}
           onSubmit={hendleFeedbackSubmit}
+          hendleDeleteFeedback={hendleDeleteFeedback}
         />
       </Container>
     </div>

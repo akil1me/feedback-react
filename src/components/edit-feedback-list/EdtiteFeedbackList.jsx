@@ -2,7 +2,7 @@
 import { FeedbackItem } from "../main/feedback-list/feedback-item/FeedbackItem";
 
 
-const EditeFeedbackList = ({ feedBackList }) => {
+export const EditeFeedbackList = ({ feedBackList }) => {
 
 
   return (

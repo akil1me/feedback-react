@@ -1,5 +1,6 @@
-import Button from "../../button/Button"
-import "./category.scss"
+import { Button } from "../../button/";
+
+import "./category.scss";
 
 export const Category = () => {
   return (

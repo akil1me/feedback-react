@@ -1,13 +1,12 @@
+//  hooks
 import { useContext } from "react";
 import { useParams } from "react-router-dom";
+
+//context
 import { AppContext } from "../../App";
 
-import AddComment from "../../components/add-comment/AddComment";
-import Comments from "../../components/comments/Comments";
-import { Container } from "../../components/container/Container";
-
-import EditeFeedbackList from "../../components/edit-feedback-list/EdtiteFeedbackList";
-import EditeFeedback from "../../components/edit-feedback/EditFeedback";
+// compornets
+import { Comments, AddComment, Container, EditeFeedback, EditeFeedbackList } from "../../components/";
 
 const Detail = () => {
 

@@ -1,9 +1,14 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../../App";
 import icon from "../../../assets/img/icon.svg";
-import FeedBtn from "../../button/FeedBtn";
+import { FeedBtn } from "../../button/";
 import "./addFeedback.scss"
 
 export const AddFeedback = () => {
+
+  const { login } = useContext(AuthContext)
+
   return (
     <div className="addFeedbeck">
       <div className="addFeedbeck__left-content d-flex align-items-center">
@@ -25,9 +30,8 @@ export const AddFeedback = () => {
         </div>
       </div>
 
-
       <div className="position-relative">
-        <Link to="/suggestions/new-feedback" className="position-absolute top-0 bottom-0 end-0 start-0"></Link>
+        <Link to={login ? "/suggestions/new-feedback" : "/login"} className="position-absolute top-0 bottom-0 end-0 start-0"></Link>
         <FeedBtn text="+ Add Feedback" classs="addBtn" />
       </div>
     </div>

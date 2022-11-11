@@ -1,6 +1,4 @@
-import { Container } from "../../components/container/Container";
-import { Main } from "../../components/main/Main";
-import { SiteBar } from "../../components/site-bar/SiteBar";
+import { Main, SiteBar, Container } from "../../components/";
 
 import "./suggestions.scss"
 

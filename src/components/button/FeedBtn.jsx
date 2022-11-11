@@ -1,6 +1,6 @@
 import "./feedBtn.scss"
 
-const FeedBtn = (props) => {
+export const FeedBtn = (props) => {
   return (
     <button className={`feed-btn ${props.classs} ${props.edit}`} type="submit">
       {props.text}
@@ -8,4 +8,3 @@ const FeedBtn = (props) => {
   )
 }
 
-export default FeedBtn;

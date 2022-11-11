@@ -1,5 +1,5 @@
 
-const AnsCommentItem = ({ ans }) => {
+export const AnsCommentItem = ({ ans }) => {
   return (
     <li className="comment-item comment-item2 mb-3">
       <div className="d-flex justify-content-between">
@@ -21,4 +21,3 @@ const AnsCommentItem = ({ ans }) => {
   )
 }
 
-export default AnsCommentItem;

@@ -1,8 +1,9 @@
-import CommentsItem from "../commentsItem/CommentsItem";
+import { CommentsItem } from "../commentsItem/"
+
 
 import commets from "../../../data/comments"
 
-const CommentsList = () => {
+export const CommentsList = () => {
   return (
     <ul className="mt-5">
       {
@@ -11,5 +12,3 @@ const CommentsList = () => {
     </ul>
   )
 }
-
-export default CommentsList;

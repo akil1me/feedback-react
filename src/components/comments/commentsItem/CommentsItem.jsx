@@ -1,7 +1,8 @@
-import AnsCommentItem from "./AnsCommentItem";
+import { AnsCommentItem } from "./";
+
 import "./commentItem.scss"
 
-const CommentsItem = (props) => {
+export const CommentsItem = (props) => {
 
   return (
     <li className="comment-item">
@@ -29,5 +30,3 @@ const CommentsItem = (props) => {
     </li>
   )
 }
-
-export default CommentsItem;

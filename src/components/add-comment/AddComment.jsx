@@ -1,7 +1,7 @@
-import FeedBtn from "../button/FeedBtn";
+import { FeedBtn } from "../button/";
 import "./addComment.scss"
 
-const AddComment = () => {
+export const AddComment = () => {
   return (
     <div className="add-coment card p-4 mt-4 mb-3">
       <div>
@@ -19,5 +19,3 @@ const AddComment = () => {
     </div>
   )
 }
-
-export default AddComment;

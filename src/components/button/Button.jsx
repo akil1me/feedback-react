@@ -1,6 +1,6 @@
 import "./button.scss"
 
-const Button = (props) => {
+export const Button = (props) => {
   return (
     <button className={`button ${props.classs}`} type="button">
       {props.text}
@@ -8,4 +8,3 @@ const Button = (props) => {
   )
 }
 
-export default Button;
