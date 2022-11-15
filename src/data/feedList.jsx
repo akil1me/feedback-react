@@ -13,7 +13,7 @@ const feedList = [
     title: "Add a dark theme option",
     text: "It would help people with light sensitivities and who prefer dark mode.",
     mark: 99,
-    num: 4,
+    num: 0,
     btn: "Feature",
   },
 
