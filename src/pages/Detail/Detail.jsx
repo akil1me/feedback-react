@@ -23,7 +23,7 @@ const Detail = () => {
           <>
             <EditeFeedback />
             <EditeFeedbackList feedBackList={feedBackList} />
-            <Comments {...feedBackList} />
+            <Comments feedBackList={feedBackList}  {...feedBackList} />
             <AddComment />
           </> :
           <h3 className="text-center">404 page not found</h3>

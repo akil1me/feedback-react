@@ -1,19 +1,17 @@
-import { useContext, useRef } from "react";
+import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../App";
 
 export const Login = () => {
   const navigate = useNavigate()
 
-  const emailRef = useRef();
-  const passwordRef = useRef();
-
-  const { setLogin, login } = useContext(AuthContext)
+  const { setLogin, login, emailRef, passwordRef, userRef } = useContext(AuthContext);
 
   const hendleLoginSubmit = (evt) => {
     evt.preventDefault();
 
     const loginObj = {
+      user: userRef.current.value,
       email: emailRef.current.value,
       passwordRef: passwordRef.current.value,
     }
@@ -28,6 +26,7 @@ export const Login = () => {
       <div className="card w-50 p-4 ">
         <h1 className="text-center">Login</h1>
         <form autoComplete="off" onSubmit={hendleLoginSubmit}>
+          <input ref={userRef} className="form-control mb-2" type="text" required placeholder="user-name" />
           <input ref={emailRef} className="form-control mb-2" type="email" required placeholder="email" />
           <input ref={passwordRef} className="form-control mb-2" type="password" required placeholder="password" />
 

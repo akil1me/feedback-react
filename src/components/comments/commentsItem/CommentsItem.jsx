@@ -6,16 +6,14 @@ export const CommentsItem = (props) => {
 
   return (
     <li className="comment-item">
-      <div className="d-flex justify-content-between">
-        <img src={props.img} alt="" width={40} height={40} />
+      <div className="d-flex">
+        <img className="rounded" src={props.img} alt={props.name} width={40} height={40} />
         <div className="ms-4">
           <div className="d-flex justify-content-between">
             <div>
               <h6 className="comment-item__name mb-0">{props.name}</h6>
               <p className="comment-item__username mb-3">{props.userName}</p>
             </div>
-
-            <span href="#detail" className="comment-item__replay">Replay</span>
           </div>
 
           <p className="comment-item__comment">{props.commet}</p>

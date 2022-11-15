@@ -5,6 +5,7 @@ import avatar4 from "../assets/img/avatar-4.svg";
 
 const commets = [
   {
+    id: 2,
     img: avatar1,
     name: "Elijah Moss",
     userName: "@hexagon.bestagon",
@@ -12,6 +13,7 @@ const commets = [
     ansver: []
   },
   {
+    id: 2,
     img: avatar2,
     name: "James Skinner",
     userName: "@hummingbird1",

@@ -16,7 +16,7 @@ const NewFeedBack = () => {
       btn: selectValue,
       text: textValue,
       num: 0,
-      mark: 100,
+      mark: Math.floor(Math.random() * 100),
     }
 
     setFeedbackList([createNewFeedback, ...feedbackList])
