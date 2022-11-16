@@ -8,16 +8,18 @@ import { FeedBtn } from "../button/";
 import "./addComment.scss"
 
 export const AddComment = () => {
-  const { comments, setComments, commetRef } = useContext(AppContext);
+  const { comments, feedbackList, setFeedbackList, commetRef } = useContext(AppContext);
   const { login } = useContext(AuthContext)
 
   const { id } = useParams();
+
+  const newFeedBackList = feedbackList.find(item => item.id === +id)
 
   const hendleSubmutCommet = (e) => {
     e.preventDefault();
 
     const newComment = {
-      id: id,
+      id: new Date().getTime(),
       img: avatarDefault,
       name: login.user,
       userName: login.email,
@@ -25,7 +27,17 @@ export const AddComment = () => {
       ansver: [],
     }
 
-    setComments([...comments, newComment]);
+    const newFeed = feedbackList.map(item => {
+      if (item.id == +id) {
+        item.comments = [
+          ...item.comments, newComment
+        ]
+      }
+
+      return item
+    })
+
+    setFeedbackList(newFeed);
   }
 
   return (

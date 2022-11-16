@@ -6,6 +6,7 @@ const feedList = [
     mark: 112,
     num: 0,
     btn: "Enhancement",
+    comments: []
   },
 
   {
@@ -15,6 +16,7 @@ const feedList = [
     mark: 99,
     num: 0,
     btn: "Feature",
+    comments: []
   },
 
   {
@@ -24,6 +26,7 @@ const feedList = [
     mark: 65,
     num: 0,
     btn: "Feature",
+    comments: []
   },
 
   {
@@ -32,7 +35,8 @@ const feedList = [
     text: "Images and screencasts can enhance comments on solutions.",
     mark: 51,
     num: 0,
-    btn: "Enhancement"
+    btn: "Enhancement",
+    comments: []
   },
 
   {
@@ -42,6 +46,7 @@ const feedList = [
     mark: 42,
     num: 0,
     btn: "Feature",
+    comments: []
   },
 
   {
@@ -51,6 +56,7 @@ const feedList = [
     mark: 3,
     num: 0,
     btn: "Bug",
+    comments: []
   }
 ]
 

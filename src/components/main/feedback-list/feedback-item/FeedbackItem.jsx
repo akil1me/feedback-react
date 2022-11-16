@@ -34,7 +34,7 @@ export const FeedbackItem = (props) => {
               <img src={sms} alt="sms" />
             </button>
             <span className="feed-item__num">
-              {props.num}
+              {props.comments.length}
             </span>
           </div>
         </div>

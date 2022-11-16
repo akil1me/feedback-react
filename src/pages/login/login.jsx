@@ -18,7 +18,7 @@ export const Login = () => {
 
     setLogin(loginObj)
 
-    navigate("/")
+    navigate("/");
   }
 
   return (
